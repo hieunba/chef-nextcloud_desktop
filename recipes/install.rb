@@ -1,6 +1,6 @@
 #
 # Cookbook:: nextcloud_desktop
-# Recipe:: default
+# Recipe:: install
 #
 # Copyright:: 2021, Nghiem Ba Hieu
 #
@@ -15,4 +15,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-Chef::Log.warn('This does nothing by default.')
+
+
+windows_package 'NextCloud' do
+  source node['nextcloud_desktop']['source']
+  installer_type :msi
+  version node['nextcloud_desktop']['version']
+  action :install
+end
