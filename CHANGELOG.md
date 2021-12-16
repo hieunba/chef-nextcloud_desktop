@@ -6,6 +6,5 @@ This file is used to list changes made in each version of the nextcloud_desktop 
 
 Initial release.
 
-- change 0
-- change 1
-
+- install NextCloud Desktop v3.3.6
+- add tests
